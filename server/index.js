@@ -2,9 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const User = require('./models/user.models.js');
 const userRoute = require('./routes/user.route.js');
+const signupRoute = require('./routes/signup.js');
+const loginRoute = require('./routes/login.js');
 const app = express();
 const cors = require('cors');
-const signupRoute = require('./routes/signup.js');
+const createAdminAccount = require('./scripts/admin.js');
 const bodyParser = require('body-parser');
 const corsOptions = {
     origin: ["http://localhost:5173"],
@@ -20,6 +22,9 @@ app.use(bodyParser.json());
 //routes
 app.use('/api/users', userRoute);
 app.use('/users', signupRoute);
+app.use('/auth', loginRoute);
+
+createAdminAccount();
 
 app.get('/', (req, res) => {
     res.send('Hello new from Node API')
