@@ -52,6 +52,7 @@ const Login = () => {
           <Form.Control
             type='email'
             name='email'
+            required
             placeholder='Enter Email'
             value={formData.email}
             onChange={handleInputChange}
@@ -62,6 +63,7 @@ const Login = () => {
           <Form.Control
             type='password'
             name='password'
+            required
             placeholder='Enter Password'
             value={formData.password}
             onChange={handleInputChange}
