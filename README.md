@@ -20,7 +20,10 @@ A simple MERN (MongoDB, Express, React.js, Node.js) stack application with CRUD 
 
 - ✅ JWT login/signup
 - ✅ User data CRUD functionality
-- 🚧 Feature 3 (in progress)
+- 🚧 (Features in progress): 
+- 🟩 Google analytics
+- 🟩 Data driven graphs to give more insight into user/client needs
+- 🟩 Client notes
 
 ## Installation
 
