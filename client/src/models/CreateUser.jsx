@@ -53,6 +53,7 @@ const CreateUser = () => {
                     <Form.Control
                         type='email'
                         name='email'
+                        required
                         placeholder='Enter Email'
                         value={formData.email}
                         onChange={handleInputChange}
@@ -63,6 +64,7 @@ const CreateUser = () => {
                     <Form.Control
                         type='text'
                         name='first_name'
+                        required
                         placeholder='Enter First Name'
                         value={formData.first_name}
                         onChange={handleInputChange}
@@ -73,6 +75,7 @@ const CreateUser = () => {
                     <Form.Control
                         type='text'
                         name='last_name'
+                        required
                         placeholder='Enter Last Name'
                         value={formData.last_name}
                         onChange={handleInputChange}
@@ -83,6 +86,7 @@ const CreateUser = () => {
                     <Form.Control
                         type='password'
                         name='password'
+                        required
                         placeholder='Enter Password'
                         value={formData.password}
                         onChange={handleInputChange}

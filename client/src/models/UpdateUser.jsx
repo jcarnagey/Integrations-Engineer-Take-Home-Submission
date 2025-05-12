@@ -34,6 +34,7 @@ const UpdateUser = () => {
             })
             const result = await response.json();
             console.log(result);
+            alert("User has been updated!");
             navigate("/dashboard");
         } catch (error) {
             console.log(error.message);
@@ -50,12 +51,13 @@ const UpdateUser = () => {
     return (
         <div className='center-form'>
             <Form onSubmit={handleSubmit}>
-                <h1>Edit User</h1>
+                <h1>Update User</h1>
                 <Form.Group>
                     <Form.Label>Email Address</Form.Label>
                     <Form.Control
                         type='email'
                         name='email'
+                        required
                         placeholder='Enter Email'
                         value={formData.email}
                         onChange={handleInputChange}
@@ -66,6 +68,7 @@ const UpdateUser = () => {
                     <Form.Control
                         type='text'
                         name='first_name'
+                        required
                         placeholder='Enter First Name'
                         value={formData.first_name}
                         onChange={handleInputChange}
@@ -76,6 +79,7 @@ const UpdateUser = () => {
                     <Form.Control
                         type='text'
                         name='last_name'
+                        required
                         placeholder='Enter Last Name'
                         value={formData.last_name}
                         onChange={handleInputChange}
@@ -86,6 +90,7 @@ const UpdateUser = () => {
                     <Form.Control
                         type='password'
                         name='password'
+                        required
                         placeholder='Enter Password'
                         value={formData.password}
                         onChange={handleInputChange}
